@@ -4,6 +4,8 @@ var counter;
 $('#startButton').on('click', function(){
     var counter=setInterval(timer, 1000);
 });
+
+
 function timer() {
 
   count=count-1;
@@ -15,6 +17,11 @@ function timer() {
   }
   document.getElementById("time").innerHTML=count + " seconds!";
 };
+
+function stop() {
+  clearInterval(intervalId);
+  clockRunning = false;
+}
 
 function generateQuiz(){
 
@@ -115,6 +122,9 @@ function showQuestions(){
       resultsContainer.innerHTML = numCorrect + ' out of ' + myQuestions.length;
       // when user clicks submit, show results
       submitButton.click = showResults();
+      $('#submitButton').on('click', function(){
+        var counter=setInterval(timer, 1000);
+    });
     }
       // show the questions
       showQuestions();

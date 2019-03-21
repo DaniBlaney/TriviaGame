@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-	<meta charset="utf-8">
-	<title>Trivia Game</title>
-	<link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Doctor Who Trivia</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Sigmar+One" rel="stylesheet">
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
 
-<body id="home">
-
-	<h1>Trivia Game</h1>
-  <div class="jumbotron">
-      <h1 class="display-4">Dr. Who Fan Quiz</h1>
-      <div class="timeremaining">Time Remaining: <span id="time"></span>
-
-      </div>
-      <div id="quiz"></div>
-      <a id="startButton" class="btn btn-primary btn-lg start" href="#" role="button">Start Quiz!</a>
-      <a id="submitButton" class="btn btn-primary btn-lg" href="#" role="button">Submit</a>
-      <div id="results"></div>
+<body>
+    <header>
+        <img src='assets/images/DoctorWhoHeader.jpg' alt='headerImg' width='100%'>
+    </header>
+    <div class='container'>
+        <button class='btn btn-primary' id='startBtn'>Start</button>
+        <!-- Question page -->
+        <div id=timeLeft></div>
+        <div id=currentQuestion></div>
+        <div class='question'></div>
+        <div class='answerList'></div>
+        <!-- Answer Page -->
+        <div id=message></div>
+        <div id=correctedAnswer></div>
+        <div id=gif></div>
+        <!-- Scoreboard -->
+        <div id=finalMessage></div>
+        <div id=correctAnswers></div>
+        <div id=incorrectAnswers></div>
+        <div id=unanswered></div>
+        <div id='startOverBtn'></div>
     </div>
-  <footer>
-        <p>© 2019 - Site Built By Ms. Danielle Blaney</p>
-  </footer>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>

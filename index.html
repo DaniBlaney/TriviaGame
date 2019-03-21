@@ -14,6 +14,8 @@
     <header>
         <img src='assets/images/doctor.png' alt='headerImg' width='100%'>
         <h1>Trivia Time!</h1>
+       <!--<audio id="themesong">
+        <source src="assets/images/themesong.wav"></audio>-->
     </header>
     <div class='container'>
         <button class='btn btn-primary' id='startBtn'>Start</button>
@@ -33,12 +35,15 @@
         <div id=unanswered></div>
         <div id='startOverBtn'></div>
     </div>
-    <div><img class= dalek id= dalek1 src='assets/images/dalek.png'alt='Dalek' onmouseover="PlaySound('mySound')"> </img></div>
-    <div><img class= dalek id=dalek2 src='assets/images/dalek.png'alt='Dalek'> </img></div>
-    <audio id="mySound">
-            <source src="assets/images/exterminate.mp3"></source>
-            Your browser isn't invited for super fun audio time.
-    </audio>
+    <script>
+            function play(){
+                 var audio = document.getElementById("audio");
+                 audio.play();
+                           }
+    </script>
+    <div><img class= dalek id= dalek1 src='assets/images/dalek.png'alt='Dalek'value="PLAY"  onclick="play()"> </img></div>
+    <div><img class= dalek id=dalek2 src='assets/images/dalek.png'alt='Dalek'value="PLAY"  onclick="play()"> </img></div>
+    <audio id="audio" src="assets/images/exterminate.mp3" ></audio>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
     <footer>

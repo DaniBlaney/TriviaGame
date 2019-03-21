@@ -1,3 +1,5 @@
+var themesong = document.getElementById('themesong');
+
 var triviaQuestions = [{
 	question: "Who plays the tenth Doctor?",
 	answerList: ["David Tennant", "Peter Capaldi", "Matt Smith", "Donald Trump"],
@@ -229,4 +231,12 @@ function scoreboard(){
 //   var thissound=document.getElementById(mySound);
 //   thissound.pause();
 //   thissound.currentTime = 0;
+// }
+
+//   window.onload = function() {
+//     document.getElementById("themesong").play();
+
+//     window.addEventListener("click", function() {
+//     document.getElementById("themesong").pause()
+//   })
 // }

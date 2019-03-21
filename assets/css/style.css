@@ -52,7 +52,7 @@ footer {
 #dalek1 {
   float: right;
 }
-
+/*flip image*/
 #dalek2 {
     transform: scale(-1, 1);
 }
@@ -72,7 +72,7 @@ footer {
 }
 
 .container{
-	margin-top: 50px;
+	margin-top: 20px;
 	text-align: center;
 	height: 100%;
 	width: 700px;

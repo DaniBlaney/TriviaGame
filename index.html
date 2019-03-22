@@ -18,34 +18,36 @@
         <source src="assets/images/themesong.wav"></audio>-->
     </header>
     <div class='container'>
-        <button class='btn btn-primary' id='startBtn'>Start</button>
-        <!-- Question page -->
-        <div id=timeLeft></div>
-        <div id=currentQuestion></div>
-        <div class='question'></div>
-        <div class='answerList'></div>
-        <!-- Answer Page -->
-        <div id=message></div>
-        <div id=correctedAnswer></div>
-        <div id=gif></div>
-        <!-- Scoreboard -->
-        <div id=finalMessage></div>
-        <div id=correctAnswers></div>
-        <div id=incorrectAnswers></div>
-        <div id=unanswered></div>
-        <div id='startOverBtn'></div>
-    </div>
-    <script>
-            function play(){
-                 var audio = document.getElementById("audio");
-                 audio.play();
-                           }
-    </script>
-    <div><img class= dalek id= dalek1 src='assets/images/dalek.png'alt='Dalek'value="PLAY"  onclick="play()"> </img></div>
-    <div><img class= dalek id=dalek2 src='assets/images/dalek.png'alt='Dalek'value="PLAY"  onclick="play()"> </img></div>
-    <audio id="audio" src="assets/images/exterminate.mp3" ></audio>
+                <button class='btn btn-primary' id='startBtn'>Start</button>
+                <!-- Question page -->
+                <div id=timeLeft></div>
+                <div id=currentQuestion></div>
+                <div class='question'></div>
+                <div class='answerList'></div>
+                <!-- Answer Page -->
+                <div id=message></div>
+                <div id=correctedAnswer></div>
+                <div id=gif></div>
+                <!-- Scoreboard -->
+                <div id=finalMessage></div>
+                <div id=correctAnswers></div>
+                <div id=incorrectAnswers></div>
+                <div id=unanswered></div>
+                <div id='startOverBtn'></div>
+            </div>
+                <script>
+                        function play(){
+                            var audio = document.getElementById("audio");
+                            audio.play();
+                                    }
+                </script>
+                    <div class = image><img class= dalek id= dalek1 src='assets/images/dalek.png'alt='Dalek'value="PLAY"  onclick="play()"> </img></div>
+                    <div class = image><img class= dalek id=dalek2 src='assets/images/dalek.png'alt='Dalek'value="PLAY"  onclick="play()"> </img></div>
+                    <audio id="audio" src="assets/images/exterminate.mp3" ></audio>
+            </div>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
+
     <footer>
         <p>© 2019 - Site Built By Ms. Danielle Blaney</p>
     </footer>

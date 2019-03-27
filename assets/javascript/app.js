@@ -1,4 +1,12 @@
-var themesong = document.getElementById('themesong');
+$(document).ready()
+
+  var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+  if(!isChrome){
+    $('#iframeAudio').remove()
+  }
+  else{
+  $('#playAudio').remove() //just to make sure that it will not have 2x audio in the background
+	};
 
 var triviaQuestions = [{
 	question: "Who plays the tenth Doctor?",
@@ -168,7 +176,7 @@ function newQuestion(){
 		answerPage();
 	});
 }
-
+//creates countdown
 function countdown(){
 	seconds = 15;
 	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
@@ -176,7 +184,7 @@ function countdown(){
 	//sets timer to go down
 	time = setInterval(showCountdown, 1000);
 }
-
+//shows countdown
 function showCountdown(){
 	seconds--;
 	$('#timeLeft').html('<h3>Time Remaining: ' + seconds + '</h3>');
@@ -189,7 +197,7 @@ function showCountdown(){
 
 function answerPage(){
 	$('#currentQuestion').empty();
-	$('.thisChoice').empty(); //Clears question page
+	$('.thisChoice').empty();
 	$('.question').empty();
 
 	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
@@ -209,7 +217,7 @@ function answerPage(){
 		$('#correctedAnswer').html('The correct answer was: ' + rightAnswerText);
 		answered = true;
 	}
-
+//checks correct
 	if(currentQuestion == (triviaQuestions.length-1)){
 		setTimeout(scoreboard, 5000)
 	} else{
@@ -217,7 +225,7 @@ function answerPage(){
 		setTimeout(newQuestion, 5000);
 	}
 }
-
+//creates scoreboard
 function scoreboard(){
 	$('#timeLeft').empty();
 	$('#message').empty();
@@ -231,7 +239,8 @@ function scoreboard(){
 	$('#startOverBtn').addClass('reset');
 	$('#startOverBtn').show();
 	$('#startOverBtn').html('Start Over?');
-}
+};
+
 // //animate daleks
 // $(document).ready(function() {
 //   animateDiv($('.a'));

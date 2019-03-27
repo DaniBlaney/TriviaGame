@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,19 +9,18 @@
     <link href="assets/css/reset.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
+    <iframe src="themesong.mp3" allow="autoplay" volume="0.05" style="display:none" id="iframeAudio">
+    </iframe>
+        <audio autoplay loop volume="0.05" id="playAudio" type="audio/mp3">
+            <source src="./themesong.mp3">
+        </audio>
 </head>
 
 <body>
     <header>
         <img src='assets/images/doctor.png' alt='headerImg' width='100%'>
         <h1>Trivia Time!</h1>
-       <!--<audio id="themesong"> DOESNT WORK
-        <source src="assets/images/themesong.wav"></audio>-->
-        <iframe src="themesong.wav" allow="autoplay" volume="0.05" style="display:none" id="iframeAudio">
-            </iframe>
-            <audio autoplay loop volume="0.05" id="playAudio">
-                <source src="themesong.wav">
-            </audio>
+
     </header>
     <div class='container'>
                 <button class='btn btn-primary' id='startBtn'>Start</button>

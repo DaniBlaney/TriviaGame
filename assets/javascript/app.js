@@ -101,12 +101,12 @@ var triviaQuestions = [{
 	answerList: ["The Master", "Time Lords", "Cybermen", "Abominable Snowman"],
   answer: 0
 }]
-
+//here is the array that will later have the gifs match the quetion number
 var gifArray = ['question1', 'question2', 'question3', 'question4', 'question5', 'question6', 'question7', 'question8', 'question9', 'question10', 'question11', 'question12', 'question13','question14','question15', 'question16', 'question17', 'question18', 'question19', 'question20', 'question21', 'question22', 'question23', 'question24', 'question25'];
 var currentQuestion; var correctAnswer; var incorrectAnswer; var unanswered; var seconds; var time; var answered; var userSelect;
 var messages = {
-	correct: "Yes, that's right!",
-	incorrect: "No, that's not it.",
+	correct: "Yes, you got it!",
+	incorrect: "Nope, that is incorrect",
 	endTime: "Out of time!",
 	finished: "Alright! Let's see how well you did."
 }
@@ -120,7 +120,7 @@ $('#startOverBtn').on('click', function(){
 	$(this).hide();
 	newGame();
 });
-
+//creates new game
 function newGame(){
 	$('#finalMessage').empty();
 	$('#correctAnswers').empty();
@@ -132,7 +132,7 @@ function newGame(){
 	unanswered = 0;
 	newQuestion();
 }
-
+//creates new question
 function newQuestion(){
 	$('#message').empty();
 	$('#correctedAnswer').empty();
@@ -140,7 +140,7 @@ function newQuestion(){
 	answered = true;
 
 	//sets up new questions & answerList
-	$('#currentQuestion').html('Question #'+(currentQuestion+1)+'/'+triviaQuestions.length);
+	$('#currentQuestion').html('Question '+(currentQuestion+1)+'/'+triviaQuestions.length);
 	$('.question').html('<h2>' + triviaQuestions[currentQuestion].question + '</h2>');
 	for(var i = 0; i < 4; i++){
 		var choices = $('<div>');

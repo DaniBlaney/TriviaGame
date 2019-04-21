@@ -18,7 +18,7 @@ var triviaQuestions = [{
 	answer: 2
 },{
 	question: "What is the TARDIS disguised as?",
-	answerList: ["Phone Booth", "Suitcase", "Refrigerator", "Fish Bowl"],
+	answerList: ["Police Box", "Suitcase", "Refrigerator", "Fish Bowl"],
 	answer: 0
 },{
 	question: "what is Chen-7?",
